@@ -239,7 +239,7 @@ img.alignright {
 
 /* Custom Classes */
 .final-section {
-    background: url(images/greenboard.png);
+    background: url(../images/greenboard.png);
 /*    background-color:rgb(142, 255, 173);*/
     color: #4f4f4f;
 }
@@ -293,7 +293,7 @@ img.alignright {
 	position:relative;
 	display:block;
 	text-align: center;
-    background: url(images/blackboard.png);
+    background: url(../images/blackboard.png);
 /*    background-size:100% 100%;*/
     padding-bottom: 1em;
 }
@@ -307,12 +307,12 @@ img.alignright {
 	display: inline-block;
 	width: 70px;
 	height: 69px;
-	background: url(images/littlelam2.png) right 0 no-repeat;
+	background: url(../images/littlelam2.png) right 0 no-repeat;
 	text-indent: -99999px;
     background-color: #fff;
 }
 #masthead a.info-btn:hover span.show-info {
-	background: url(images/littlelam2.png) right 0 no-repeat;
+	background: url(../images/littlelam2.png) right 0 no-repeat;
     background-color: #fff;
 }
 #masthead a.info-btn span.more-info {
@@ -535,7 +535,7 @@ img {
 		line-height: 1.7;
 	}
     .feature-bg {
-        background: url(images/biglam-peach.png) no-repeat;
+        background: url(../images/biglam-peach.png) no-repeat;
         background-position: 50% 75%;
         background-size: 225px 225px;
     }
@@ -677,7 +677,7 @@ img {
 		background: #eb7a77;
 		color: #fff;
 /*
-		background: url(images/greenboard.png);
+		background: url(../images/greenboard.png);
         background-color: #fff;
         color: #fff;
 */
