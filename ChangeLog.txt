@@ -1,3 +1,12 @@
+2013-12-08: Version 2.0.0-beta
+------------------------------
+
+Support for Intensional Function Application
+Traces and indices with arbitrary type specifications
+Export trees to LaTeX
+Support for polymorphic types on functions and arguments
+
+
 2008-03-29: Version 1.0.12
 --------------------------
 

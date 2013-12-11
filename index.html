@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>The Lambda Calculator</title>
-    <link rel="stylesheet" type="text/css" href="lambda.css" />
-    <link rel="stylesheet" type="text/css" href="slider.css" />
+    <link rel="stylesheet" type="text/css" href="css/lambda.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
     <script src="js/modernizr.custom.js"></script>
 </head>
 
@@ -29,7 +29,8 @@
 			<p class="slogan-text">
                 For students and teachers of natural language semantics.
                 <br/>
-                <span style="font-size:75%">By Lucas Champollion, Josh Tauberer, and Maribel Romero</span>
+                <span style="font-size:75%">By Lucas Champollion, Josh
+                  Tauberer, Maribel Romero, and Dylan Bumford</span>
             </p>
 		</div><!-- end .slogan -->
     </aside>	
@@ -63,7 +64,7 @@
             <h3>Features</h3>
             <p class="justify"><b>NEWS:</b> Thanks to an
                 <a href="http://www.nyu.edu/faculty/funding-opportunities/curricular-development-challenge-fund.html">NYU CDCF</a>
-                grant, the latest release (v2.0.0-beta) includes flexibility for types in a variety of uses:
+                grant awarded in in the spring of 2013, the latest release (v2.0.0-beta) includes flexibility for types in a variety of uses:
                 <ul>
                     <li>More flexible composition rules, including <strong>Predicate Modification</strong> and
                         <strong>Intensional Function Application</strong></li>
@@ -141,9 +142,21 @@
                 to display unintended behavior at times. It also appears to be incompatible with OS X 10.9 (Mavericks), at the moment.
             </p>
             <div class="downloads">
-                <div style="float:left"><a href="LambdaCalculator.exe"><img src="images/windows.png"/></a></div>
-                <div style="display:inline"><a href="LambdaCalculator.app"><img src="images/mac.png"/></a></div>
-                <div style="float:right"><a href="LambdaCalculator.jar"><img src="images/linux.png"/></a></div>
+                <div style="float:left">
+                  <a href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE.exe">
+                    <img src="images/windows.png"/>
+                  </a>
+                </div>
+                <div style="display:inline">
+                  <a href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE.zip">
+                    <img src="images/mac.png"/>
+                  </a>
+                </div>
+                <div style="float:right">
+                  <a href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculator.jar">
+                    <img src="images/linux.png"/>
+                  </a>
+                </div>
             </div>
             <p>For Mac and Windows: just download and double-click to start. For Linux: start with
                 <code>java -jar LambdaCalculator.jar</code>, but make sure you run it with Sun's Java, not GNU libgcj.
@@ -151,7 +164,7 @@
             </p>
         
             <h6>Installing Java</h6>
-            <p>Windows and Linux users will need to make sure they have the <a href="http://www.java.com/getjava">Java JRE</a> 1.4 or
+            <p>Windows and Linux users will need to make sure they have the <a href="http://www.java.com/getjava">Java JRE</a> 1.6 or
                 newer installed. The Windows version of the calculator will check on startup if Java is installed, and if necessary,
                 will take the user to a website where Java can be downloaded.
                 
