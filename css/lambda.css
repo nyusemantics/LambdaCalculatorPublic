@@ -283,6 +283,9 @@ img.alignright {
 .downloads a {
     border-bottom: none;
 }
+.downloads a {
+    font-size:250%;
+}
 
 
 
