@@ -239,7 +239,7 @@ img.alignright {
 
 /* Custom Classes */
 .final-section {
-    background: url(../images/greenboard.png);
+    background: url(../images/greenboard3.jpg);
 /*    background-color:rgb(142, 255, 173);*/
     color: #4f4f4f;
 }
@@ -296,7 +296,7 @@ img.alignright {
 	position:relative;
 	display:block;
 	text-align: center;
-    background: url(../images/blackboard.png);
+    background: url(../images/blackboard.jpg);
 /*    background-size:100% 100%;*/
     padding-bottom: 1em;
 }
@@ -680,7 +680,7 @@ img {
 		background: #eb7a77;
 		color: #fff;
 /*
-		background: url(../images/greenboard.png);
+		background: url(../images/greenboard3.png);
         background-color: #fff;
         color: #fff;
 */
