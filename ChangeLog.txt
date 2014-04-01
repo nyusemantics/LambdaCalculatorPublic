@@ -1,6 +1,7 @@
-2013-12-08: Version 2.0.0-beta
+2013-04-01: Version 2.0.0-beta
 ------------------------------
 
+Codesigned Mac application to bypass Gatekeeper security checks
 Support for Intensional Function Application
 Traces and indices with arbitrary type specifications
 Export trees to LaTeX
