@@ -288,6 +288,49 @@ img.alignright {
 }
 
 
+.text-center {
+    text-align: center;
+}
+.download .text-center {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.download .text-center h1 {
+    margin: 20px;
+}
+.download .text-center a.button {
+    display: inline-block;
+    width: 150px;
+    font-size: 18px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden;
+    border: none;
+    background-color: #eee;
+    color: #5F8F00;
+}
+.download .text-center a.button i {
+    display: block;
+}
+.download .text-center a.button:hover {
+    background-color: #5F8F00;
+    color: #eee;
+}
+.download .text-center .note {
+    display: block;
+    margin: 5px 0;
+}
+
+
+
+
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	4.0 Header (Masthead)
