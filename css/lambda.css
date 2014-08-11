@@ -42,7 +42,7 @@ body {
 }
 
 /* --- Google Fonts --- */
-#site-title h1,
+#site-title h1, #navbar,
 #masthead .slogan h3.slogan-headline,
 #masthead .slogan p.slogan-text,
 .entry-content table,
@@ -93,6 +93,13 @@ h6 {
 	margin: 0.9em 0;
 	font-size: 18px;
 	font-size: 1.125rem;
+}
+h3.anchor:before { 
+    display: block; 
+    content: " "; 
+    margin-top: -80px; 
+    height: 80px; 
+    visibility: hidden; 
 }
 
 /* Text Elements */
@@ -185,11 +192,15 @@ dl dd {
 	line-height:1.65;
 }
 a {
-	color: #33a6b8;
-	text-decoration: none;
+    color: rgb(110, 208, 136);
+    border-bottom: 1px dashed;
+    text-decoration: none;
 }
 a:hover {
-	color: #0089a7;
+	color: #eb7a77;
+}
+.cbp-fwslider a, #navbar a, #masthead a {
+    border-bottom: none;
 }
 
 table th,
@@ -239,23 +250,23 @@ img.alignright {
 
 /* Custom Classes */
 .final-section {
-    background: url(../images/greenboard3.jpg);
-/*    background-color:rgb(142, 255, 173);*/
+/*    background: url(../images/greenboard3.jpg);*/
+    background-color: #fff;
     color: #4f4f4f;
 }
 .final-section h3, h6 {
-/*    color: #4f4f4f;*/
-    color: #fff;
+    color: #4f4f4f;
+/*    color: #fff;*/
 }
 .final-section h6 {
     margin-top: 2em;
 }
 .final-section a {
-    color: #eb7a77;
+    color: rgb(110, 208, 136);
     border-bottom: 1px dashed;
 }
 .final-section a:hover {
-    color: #fff;
+    color: #eb7a77;
 }
 .final-section code {
 /*
@@ -275,24 +286,31 @@ img.alignright {
     position:absolute;
     top: 0; left: 0; bottom: 0; right: 0;
 }
+
+
+
 .downloads {
     text-align:center;
     max-width:75%;
     margin:2em auto;
 }
-.downloads a {
+/*.downloads a {
     border-bottom: none;
 }
 .downloads a {
     font-size:250%;
-}
+}*/
 
+
+/*-----------------------------------------------------------------------------------*/
+/*	4.0 Downloads
+/*-----------------------------------------------------------------------------------*/
 
 .text-center {
     text-align: center;
 }
 .download .text-center {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     text-align: center;
 }
 .download .text-center h1 {
@@ -302,46 +320,225 @@ img.alignright {
     display: inline-block;
     width: 150px;
     font-size: 18px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-    margin: 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    margin: 0 36px;
     padding: 20px;
     overflow: hidden;
     border: none;
-    background-color: #eee;
-    color: #5F8F00;
+    background-color: rgb(184, 255, 203);
+    color: #4f4f4f;
 }
 .download .text-center a.button i {
     display: block;
 }
 .download .text-center a.button:hover {
-    background-color: #5F8F00;
-    color: #eee;
+    background-color: #4f4f4f;
+    color: rgb(184, 255, 203);
 }
 .download .text-center .note {
     display: block;
     margin: 5px 0;
 }
+button, .button {
+    color: #fff;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 8px;
+    text-decoration: none;
+    border: 1px solid #699e00;
+    background-color: #699e00;
+    border-color: #84c700;
+}
+input, textarea, select, button, .button {
+    font-family: Roboto, "Helvetica Neue", helvetica, arial, sans-serif;
+    font-size: 13px;
+    margin: 5px 0;
+    padding: 5px;
+    color: #333;
+    border: 1px solid #dedede;
+}
+button i[class^="fa fa-"], .button i[class^="fa fa-"], button i[class*=fa-], .button i[class*=fa-] {
+    margin: 0 3px;
+}
+i[class^="fa fa-"], i[class*=fa-] {
+    display: inline-block;
+    text-align: center;
+}
+/*ul.fa-ul li i {
+    
+}*/
+/*.fa-3x {
+    font-size: 3em;
+}
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-apple:before {
+    content: "\f179";
+}
+.fa-windows:before {
+    content: "\f17a";
+}
+.fa-linux:before {
+    content: "\f17c";
+}*/
 
+/*-----------------------------------------------------------------------------------*/
+/*	4.0 Features
+/*-----------------------------------------------------------------------------------*/
 
+.top-service-grid{
+	float:left;
+	width:48%;
+	float:left;
+	margin-right:2%;
+	text-align:center;
+}
+.top-service-grid:nth-child(3){
+	margin-right:0;
+}
+.top-service-grid a{
+	display:block;
+}
+.top-service-grid a span{
+	font-size: 1.5em;
+	color: #323232;
+	font-family: trebuchet ms,'open_sansregular';
+	font-weight: 900;
+	margin:1em 0 0.6em 0;
+	display:block;
+}  
+.top-service-grid p{
+	color:#5E5E5E;
+	line-height:1.5em;
+	width:90%;
+	margin:0 auto;
+}
+.top-service-grids {
+	padding: 7em 0;
+}
+.wrap{
+	width: 80%;
+	margin: 0 auto;
+}
+.featurerow {
+    border-bottom: 1px solid rgb(152, 233, 173);
+    padding: 1em 0 1em 0;
+}
+.featurerow h5 {
+    margin-top: 0px;
+}
+.featurerow-left {
+    float:left;
+    width:50%;
+}
+.featurerow-right {
+    float:right;
+    width:50%;
+}
+.featurerow img {
+    height:280px;
+}
+.featurerow-right img {
+    float:right;
+}
+.featurerow .interactive {
+    height: 280px;
+display: block;
+background: url(../images/interactive.png) no-repeat;
+cursor: pointer;
+}
 
-
+#examples {
+    margin: 0 0 2em 4em;
+}
+#examples a {
+  position: relative;
+  text-decoration: none;
+  border-bottom: none;
+  margin-right: 1em;
+}
+#examples a:hover::after {
+  border-bottom-color: #eb7a77
+}
+#examples a::after {
+  border-bottom: 1px dashed rgb(110, 208, 136);
+  bottom: -6px;
+  content: '';
+  height: 10px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+#examples a {
+    
+}
 
 
 
 /*-----------------------------------------------------------------------------------*/
 /*	4.0 Header (Masthead)
 /*-----------------------------------------------------------------------------------*/
+
+#navbar {
+	background: #fff;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #eb7a77;
+	z-index: 100;
+}
+nav {
+	float: right;
+	padding: 6px 20px;	
+}
+nav a {
+	color: #eb7a77;
+	text-decoration: none;
+	font-weight: bold;
+}
+nav a:hover {
+	color: #444;
+}
+nav ul {
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+}
+#logo{
+	margin-left: 20px;
+	float: left;
+	width: 50px;
+	height: 50px;
+	background: url(../images/littlelam-peach3.png) no-repeat center;
+	display: block;
+}
+
+
 #masthead {
 	position:relative;
 	display:block;
 	text-align: center;
     background: url(../images/blackboard.jpg);
 /*    background-size:100% 100%;*/
-    padding-bottom: 1em;
+    padding-bottom: 4em;
+    margin-top: 50px;
 }
 #masthead .slogan p.slogan-text:before {
 	border-top: 2px solid rgb(184, 255, 203);
@@ -416,6 +613,44 @@ img.alignright {
   text-align: center;
 }
 
+#masthead .button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 46px;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 250px;
+  /* auto */
+  text-align: center;
+  background: none repeat scroll 0 0;
+  /* DELETE WHEN WIDTH AUTO */
+}
+/*#masthead .button:hover {
+  background: none repeat scroll 0 0 rgb(184, 255, 203);
+}*/
+#masthead .peach {
+    background-color: #eb7a77;
+}
+#masthead .peach:hover {
+    background-color: rgb(152, 233, 173);
+
+}
+#masthead .mint {
+    background-color: rgb(152, 233, 173);
+}
+#masthead .mint:hover {
+    background-color: #eb7a77;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	5.0 Posts
 /*-----------------------------------------------------------------------------------*/
@@ -436,7 +671,7 @@ img.alignright {
 	-ms-word-wrap: break-word;
 }
 .entry-content ul li strong {
-    color: #eb7a77;
+/*    color: #eb7a77;*/
     font-weight: bold;
 }
 .entry-content h3 {
@@ -537,13 +772,13 @@ img {
 	/* --- Header --- */
 	#site-title {
 		padding-top: 0;
-		padding-bottom: 90px;
+		padding-bottom: 50px;
 		text-align: center;
 		clear: both;
 		overflow: hidden;
 	}
 	#site-title {
-		padding-top: 70px;
+		padding-top: 50px;
 	}
 	#site-title h1 {
 		margin: 46px 0 0 30px;
@@ -564,7 +799,7 @@ img {
 		font-size: 2.25rem;
 	}
 	#masthead .slogan p.slogan-text {
-		margin: 20px 0 120px;
+		margin: 20px 0 48px;
 		font-size: 24px;
 		font-size: 1.5rem;
 		line-height: 1.45;

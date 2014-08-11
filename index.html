@@ -6,16 +6,31 @@
     <title>The Lambda Calculator</title>
     <link rel="stylesheet" type="text/css" href="css/lambda.css" />
     <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/modernizr.custom.js"></script>
 </head>
 
-<body>	
+<body>
+
+<header id="navbar">
+    <a href="#" id="logo"></a>
+    <nav>
+<!--      <a href="#" id="menu-icon"></a>-->
+      <ul>
+          <li><a href="#" class="current">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#exercises">Exercises</a></li>
+      </ul>
+    </nav>
+</header>
 	
 <header id="masthead" class="clearfix" role="banner">
-    <a href="#download" class="info-btn" title="Download">
+<!--    <a href="#download" class="info-btn" title="Download">
         <span class="more-info">Download</span>
         <span class="show-info">Download</span>
-    </a>	
+    </a>-->	
 	<div id="site-title">
         <img src="images/biglam.png"
              alt="The Lambda Calculator"
@@ -33,13 +48,23 @@
                   Tauberer, Maribel Romero, and Dylan Bumford</span>
             </p>
 		</div><!-- end .slogan -->
-    </aside>	
+    </aside>
+    <a href="#download">
+    <div class="button peach">
+        Download Now <i class="fa fa-download"></i>
+    </div>
+    </a>
+    <a href="https://github.com/dylnb/LambdaCalculator/wiki">
+    <div class="button mint">
+        See The Wiki <i class="fa fa-github-square"></i>
+    </div>
+    </a>
 </header><!-- end #masthead -->
     
 <div id="main" class="site-main">
     <div id="primary" class="site-content" role="main">
         <div class="entry-content clearfix">
-            <h3>About</h3>
+            <h3 id="about" class="anchor">About</h3>
             <p class="justify"><i>The Lambda Calculator</i> is an interactive, graphical application to help students of
                 natural language semantics practice derivations in the typed lambda calculus. It is designed for both 
                 students and teachers, with modules for online classroom instruction, graded homework assignments, and self-guided
@@ -59,20 +84,9 @@
         </div><!-- end Slider -->       
     </div>
     
-    <div id="features" class="site-content" role="main">    
+    <div class="site-content" role="main">    
         <div class="entry-content clearfix" style="padding-top:1em;">
-            <h3>Features</h3>
-            <p class="justify"><b>NEWS:</b> Thanks to an
-                <a href="http://www.nyu.edu/faculty/funding-opportunities/curricular-development-challenge-fund.html">NYU CDCF</a>
-                grant awarded in the spring of 2013, the latest release (v2.0.0-beta) includes flexibility for types in a variety of uses:
-                <ul>
-                    <li>More flexible composition rules, including <strong>Predicate Modification</strong> and
-                        <strong>Intensional Function Application</strong></li>
-                    <li>Traces and Lambda Abstractions over <strong>arbitrarily-typed indices</strong></li>
-                    <li>Type variables for <strong>polymorphic</strong> lexical items and combinators</li>
-                </ul>
-            </p>
-
+            <h3 id="features" class="anchor">Features</h3>
             <p class="justify">The core of the program is described in our contribution to the proceedings of GEAF 2007:
             <br>
             <span style="display:block; margin:0.5em 4em; color:#807f7f; line-height:1.25;">Champollion, L., J. Tauberer and M. Romero (2007).
@@ -83,8 +97,78 @@
             </span>
             
             <p>A sample of the features discussed there:</p>
+            
+            <div class="featurerow clearfix">
+                <div class="featurerow-left">
+                <img src="images/interactive.png"
+                     alt="Interactive"
+                     title="Interactive"/>
+                </div>
+                <div class="featurerow-right">
+                <h5>Interactive Exercises</h5>
+                <p>Students progress through pre-prepared exercise files, checking types and reducing lambda terms. As they go,
+                    their answers are evaluated for correctness, and the program gives feedback.</p>
+                </div>
+            </div>
+            <div class="featurerow clearfix">
+                <div class="featurerow-right">
+                <img src="images/visual.png"
+                             alt="Visual"
+                             title="Visual"/>
+                </div>
+                <div class="featurerow-left">
+                <h5>Visual Derivations</h5>
+                <p>Instructors can present bottom-up derivations step-by-step. At any point, derivations may be interrupted or rewound,
+                    or re-run with modified lexical entries.</p>
+                </div>
+            </div>
+            <div class="featurerow clearfix">
+                <div class="featurerow-left">
+                <img src="images/teacher-tool.png"
+                             alt="Scoring"
+                             title="Scoring"/>
+                </div>
+                <div class="featurerow-right">
+                <h5>Grade Management</h5>
+                <p>Students may submit completed work electronically, which is automatically scored by the calculator.</p>
+                </div>
+            </div>
+            <div class="featurerow clearfix">
+                <div class="featurerow-right">
+                <img src="images/feedback.png"
+                             alt="Feedback"
+                             title="Feedback"/>
+                </div>
+                <div class="featurerow-left">
+                <h5>Immediate Feedback</h5>
+                <p>Students receive feedback after each step of a derivation or reduction. When they make mistakes, the program
+                    attempts to guess what went wrong and provide suggestions.</p>
+                </div>
+            </div>
+<!--            <div class="featurerow clearfix">
+                <div class="featurerow-left">
+                <img src="images/type-driven.png"
+                         alt="Type-driven"
+                         title="Type-driven"/>
+                </div>
+                <div class="featurerow-right">
+                <h5>Type-Driven Composition</h5>
+                <p></p>
+                </div>
+            </div>-->
+            <div class="featurerow clearfix">
+                <div class="featurerow-left">
+                <img src="images/latex.png"
+                         alt="LaTeX"
+                         title="LaTeX"/>
+                </div>
+                <div class="featurerow-right">
+                <h5>Export to LaTeX</h5>
+                <p>The program provides an option to export any tree as LaTeX source code, in a format accepted by Qtree and tikz-qtree.</p>
+                </div>
+            </div>
 
-            <div class="feature-bg">
+<!--            <div class="feature-bg">
             <div class="feature-list left">
                 <ul>
                     <li><div class="feature-text">Interactive, guided exercises</div>
@@ -129,14 +213,26 @@
                     </li>
                 </ul>
             </div>
-            </div>
+            </div>-->
+            <p class="justify" style="margin-top:3em;"><strong>NEWS:</strong> Thanks to an
+                <a href="http://www.nyu.edu/faculty/funding-opportunities/curricular-development-challenge-fund.html">NYU CDCF</a>
+                grant awarded in the spring of 2013, the latest release (v2.0.0-beta) includes flexibility for types in a variety of uses:
+                <ul>
+                    <li>More flexible composition rules, including <strong>Predicate Modification</strong> and
+                        <strong>Intensional Function Application</strong></li>
+                    <li>Traces and Lambda Abstractions over <strong>arbitrarily-typed indices</strong></li>
+                    <li>Type variables for <strong>polymorphic</strong> lexical items and combinators</li>
+                </ul>
+            </p>
+
+
 
         </div><!-- end #Features -->
     </div>
     
-    <div id="download" class="site-content final-section" role="main">   
+    <div class="site-content final-section" role="main">   
         <div class="entry-content clearfix" style="padding-top:1px;">
-            <h3>Downloading and Installing</h3>
+            <h3 id="download" class="anchor">Downloading and Installing</h3>
             <p>You can download the current student version 2.0.0-beta (April 1, 2014; <a href="ChangeLog.txt">Change Log</a>)
                 by clicking the icon for your operating system below. Note that this version is under active development, and is likely
                 to display unintended behavior at times. It is also likely to run more smoothly if your Java is up to date (more on Java
@@ -164,7 +260,7 @@
                 <!--   <1!-- Linux --1> -->
                 <!-- </a> -->
             </h6>
-            <div class="downloads">
+<!--            <div class="downloads">
                 <div style="float:left">
                   <a
                     href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE-2.0.0.exe">
@@ -183,9 +279,22 @@
                     <img src="images/linux.png"/>
                   </a>
                 </div>
+            </div>-->
+            <div class="top-level dialog wide download">
+                <div class="text-center">
+                    <a class="button" href="/static/downloads/Choir-OSX-v0.5.dmg">
+                        <i class="fa fa-apple fa fa-3x"></i>Mac OSX
+                    </a>
+                    <a class="button" href="/static/downloads/ChoirApp.msi">
+                        <i class="fa fa-windows fa fa-3x"></i>Windows
+                    </a>
+                    <a class="button" href="/static/downloads/choirapp.tar.gz">
+                        <i class="fa fa-linux fa fa-3x"></i>Linux
+                    </a>
+                </div>
             </div>
 
-            <div style="margin-top:4em; font-size:125%">Alternative stable release for 
+            <div style="font-size:125%">Alternative stable release for 
             <a
               href="https://github.com/dylnb/LambdaCalculator/releases/download/v1.0.12/LambdaCalculatorSE-1.0.12.exe">
               Windows
@@ -225,7 +334,81 @@
                 <img src="images/email.png" style="inline; vertical-align:middle;"/>
             </p>
         </div><!-- end #Downloading -->
-        <div class="entry-content flearfix">
+
+        <div class="entry-content clearfix">
+            <h3 id="exercises" class="anchor">Sample Exercises</h3>
+            <p>These documents provide some basic exercises to get you started. Just download any of the files above (or copy and save the text
+                to a blank text file of your choosing). Then run the Lambda Calculator, select Open from the Menu Bar, and open the exercise file
+                you saved.
+            </p>
+            <p>If you are an instructor, email us, and we will be happy to send you more exercise files. And if you write exercise files yourself,
+                please consider sending them to us so we can share them with other instructors.
+            </p>
+            <div id="examples">
+            <p>
+                <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example1.txt">
+                    <i class="fa fa-file-text-o fa-2x"></i>
+                </a>
+                Examples of 'semantic types' and 'lambda conversion' exercises
+            </p>
+            <p>
+                <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example2.txt">
+                    <i class="fa fa-file-text-o fa-2x"></i>
+                </a>
+                Examples of bottom-up tree derivation exercises
+            </p>
+            <p>
+                <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example3.txt">
+                    <i class="fa fa-file-text-o fa-2x"></i>
+                </a>
+                Examples of using bottom-up tree derivations with generalized quantifiers (including set notation). 
+            </p>
+            </div>
+<!--            <ul class="fa-ul">
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example1.txt">
+                        <i class="fa-li fa fa-file-text-o"></i>
+                    </a>
+                    Examples of 'semantic types' and 'lambda conversion' exercises
+                </li>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example2.txt">
+                        <i class="fa-li fa fa-file-text-o"></i>
+                    </a>
+                    Examples of bottom-up tree derivation exercises                
+                </li>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example3.txt">
+                        <i class="fa-li fa fa-file-text-o"></i>
+                    </a>
+                    Examples of using bottom-up tree derivations with generalized quantifiers (including set notation).                
+                </li>
+            </ul>-->
+<!--            <h4>Exercises from Heim and Kratzer</h4>
+            <ul>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/hk/hk_chapter03.txt">Ch. 3</a>
+                </li>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/hk/hk_chapter04.txt">Ch. 4</a>
+                </li>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/hk/hk_chapter05.txt">Ch. 5</a>
+                </li>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/hk/hk_chapter06.txt">Ch. 6</a>
+                </li>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/hk/hk_chapter07.txt">Ch. 7</a>
+                </li>
+                <li>
+                    <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/hk/hk_chapter08.txt">Ch. 8</a>
+                </li>
+            </ul>-->
+            <p>You can find more examples at the calculator's
+                <a href="https://github.com/dylnb/LambdaCalculator/wiki">Github Wiki</a></p>
+        </div>      
+        <div class="entry-content clearfix">
             <h3>More Information</h3>
             <p>Detailed instructions, sample exercises, frequently asked questions, and bug-reports are all available
                 at this project's <a href="https://github.com/dylnb/LambdaCalculator/wiki">Github Wiki</a>. We are
@@ -234,8 +417,7 @@
                 or suggestions, or send us an email.
             </p>
             <br><br><br>
-        </div>
-        
+        </div><!-- end #More Info -->        
     </div>
     
     <!--
