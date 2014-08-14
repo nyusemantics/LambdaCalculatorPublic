@@ -281,11 +281,11 @@ img.alignright {
     padding: 5px;
     color: #fff;
 }
-.final-section span {
+/*.final-section span {
     margin:auto;
     position:absolute;
     top: 0; left: 0; bottom: 0; right: 0;
-}
+}*/
 
 
 
@@ -300,6 +300,16 @@ img.alignright {
 .downloads a {
     font-size:250%;
 }*/
+div.grab {
+    background-color: #4f5759;
+    color: #fff;
+    font-size: 1.25em;
+    line-height: 2em;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+}
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -528,6 +538,16 @@ nav li {
 	height: 50px;
 	background: url(../images/littlelam-peach3.png) no-repeat center;
 	display: block;
+}
+div.peachlam {
+    background: url(../images/biglam-peach.png) no-repeat;
+    background-position: 50% 75%;
+    background-size: 225px 225px;
+    width: 225px;
+    height: 225px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: -50px;
 }
 
 
