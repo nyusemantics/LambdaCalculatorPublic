@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6,
 /* --- Headings --- */
 h1, h2, h3, h4, h5, h6 {
 	color: #4f5759;
-	font-weight: normal;
+	/* font-weight: normal; */
 	text-rendering: optimizeLegibility;
 	word-wrap: break-word;
 }
@@ -310,7 +310,46 @@ div.grab {
     width: 100%;
     padding: 12px 0;
 }
+blockquote {
+    border:1px solid #999;
+    page-break-inside:avoid;
+    padding:10px 20px;margin:0 0 20px;border-left:5px solid #eee
 
+}
+blockquote p{font-size:17.5px;font-weight:300;line-height:1.25}
+blockquote p:last-child{margin-bottom:0}
+blockquote small{display:block;line-height:1.428571429;color:#999}
+blockquote small:before{content:'\2014 \00A0'}
+blockquote:before,blockquote:after{content:""}
+blockquote{border-color:#ddd;border-color:rgba(0,0,0,0.15)}
+
+.ribbon {
+  background-color: #eb7a77;
+  overflow: hidden;
+  white-space: nowrap;
+  /* top right corner */
+  position: absolute;
+  right: -50px;
+  top: 50px;
+  /* 45 deg ccw rotation */
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* shadow */
+  -webkit-box-shadow: 0 0 10px #888;
+     -moz-box-shadow: 0 0 10px #888;
+          box-shadow: 0 0 10px #888;
+}
+.ribbon a {
+  color: #fff;
+  display: block;
+  margin: 1px 0;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*	4.0 Downloads
