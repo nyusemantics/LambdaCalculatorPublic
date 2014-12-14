@@ -1,582 +1,608 @@
 <!DOCTYPE html>
 <html id="doc" lang="en-US">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>The Lambda Calculator</title>
-    <link rel="stylesheet" type="text/css" href="css/lambda.css" />
-    <link rel="stylesheet" type="text/css" href="css/slider.css" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="js/modernizr.custom.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Lambda Calculator</title>
+  <link rel="stylesheet" type="text/css" href="css/lambda.css" />
+  <link rel="stylesheet" type="text/css" href="css/slider.css" />
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
 
-<header id="navbar">
+  <!-- sticky site navigation row -->
+  <header id="navbar">
     <a href="#" id="logo"></a>
     <nav>
-<!--      <a href="#" id="menu-icon"></a>-->
+      <!--      <a href="#" id="menu-icon"></a>-->
       <ul>
-          <li><a href="#" class="current">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#download">Download</a></li>
-          <li><a href="#exercises">Exercises</a></li>
-          <li><a href="#issues">Issues</a></li>
+        <li>
+          <a href="#" class="current">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#features">Features</a>
+        </li>
+        <li>
+          <a href="#testimonials">Testimonials</a>
+        </li>
+        <li>
+          <a href="#download">Download</a>
+        </li>
+        <li>
+          <a href="#exercises">Exercises</a>
+        </li>
+        <li>
+          <a href="#issues">Issues</a>
+        </li>
       </ul>
     </nav>
-</header>
-	
-<header id="masthead" class="clearfix" role="banner">
-<!--    <a href="#download" class="info-btn" title="Download">
-        <span class="more-info">Download</span>
-        <span class="show-info">Download</span>
-    </a>-->	
+  </header>
+  <!-- end nav bar -->
+
+  <!-- big site landing masthead -->
+  <header id="masthead" class="clearfix" role="banner">
+
+    <!-- top right ribbon -->
     <div class="ribbon">
-        <a href="http://www.nyu.edu/content/dam/nyu/facultyResources/documents/CDCF/CDCF.2012-2013.Funded.Proposal.list.pdf">CDCF 2012-13 Award!</a>
+      <a href="http://www.nyu.edu/content/dam/nyu/facultyResources/documents/CDCF/CDCF.2012-2013.Funded.Proposal.list.pdf">CDCF 2012-13 Award!</a>
     </div>
-	  <div id="site-title">
-        <img src="images/biglam.png"
-             alt="The Lambda Calculator"
-             title="The Lambda Calculator"
-             height=225
-             width=225 />
-    </div><!-- end #site-title -->
+    <!-- end ribbon -->
+
+    <!-- big lambda logo image -->
+    <div id="site-title">
+      <img src="images/biglam.png" alt="The Lambda Calculator"
+           title="The Lambda Calculator" height=225 width=225 />
+    </div>
+    <!-- end logo image -->
+
+    <!-- slogan and by-line -->
     <aside>
-        <div class="slogan">
-			<h3 class="slogan-headline">The Lambda Calculator</h3>
-			<p class="slogan-text">
-                For students and teachers of natural language semantics.
-                <br/>
-                <span style="font-size:75%">By Lucas Champollion, Josh
-                  Tauberer, Maribel Romero, and Dylan Bumford</span>
-            </p>
-		</div><!-- end .slogan -->
+      <div class="slogan">
+        <h3 class="slogan-headline">The Lambda Calculator</h3>
+        <p class="slogan-text">
+          For students and teachers of natural language semantics.
+          <br/>
+          <span style="font-size:75%">By Lucas Champollion, Josh Tauberer,
+            Maribel Romero, and Dylan Bumford</span>
+        </p>
+      </div>
+      <!-- end slogan -->
     </aside>
+
+    <!-- big masthead buttons-->
     <a href="#download">
-    <div class="button mint">
-         <i class="fa fa-download"></i> Download Now
-    </div>
+      <div class="button mint">
+        <i class="fa fa-download"></i>Download Now
+      </div>
     </a>
-<!--
-    <a href="https://github.com/dylnb/LambdaCalculator/wiki/Exercise-Files">
--->
     <a href="#exercises">
-    <div class="button mint">
-        <i class="fa fa-archive"></i> Find Fragment 
-    </div>
+      <div class="button mint">
+        <i class="fa fa-archive"></i>Find Fragment
+      </div>
     </a>
     <a href="#issues">
-    <div class="button mint">
-        <i class="fa fa-exclamation-circle"></i> Report Issue 
-    </div>
+      <div class="button mint">
+        <i class="fa fa-exclamation-circle"></i>Report Issue
+      </div>
     </a>
     <a href="#issues">
-    <div class="button mint">
-        <i class="fa fa-code"></i> Request Feature 
-    </div>
+      <div class="button mint">
+        <i class="fa fa-code"></i>Request Feature
+      </div>
     </a>
-</header><!-- end #masthead -->
-    
-<div id="main" class="site-main">
+
+  </header>
+  <!-- end masthead -->
+
+  <!-- all site content -->
+  <div id="main" class="site-main">
+
+    <!-- first content block: about blurb and big screenshots -->
     <div id="primary" class="site-content" role="main">
-        <div class="entry-content clearfix">
-            <h3 id="about" class="anchor">About</h3>
-            <p class="justify"><i>The Lambda Calculator</i> is an interactive, graphical application to help students of
-                natural language semantics practice derivations in the typed lambda calculus. It is designed for both 
-                students and teachers, with modules for online classroom instruction, graded homework assignments, and self-guided
-                practice. The primary function is to assist in the computation of natural language denotations up a syntactic tree
-                in the style of Heim &amp; Kratzer (1998). To this end, the program detects common errors and attempts to provide
-                intelligent feedback to the student user and a record of performance for the instructor.
-            </p>
 
-        </div><!-- end #About -->
-        
-        <div id="cbp-fwslider" class="cbp-fwslider">
-            <ul style="width: 500%; transition: -webkit-transform 500ms ease; -webkit-transition: -webkit-transform 500ms ease;">
-                <li><a href="#"><img src="images/sshot1.png" alt="img01" /></a></li>
-                <li><a href="#"><img src="images/sshot2.png" alt="img02" /></a></li>
-                <li><a href="#"><img src="images/sshot3.png" alt="img03" /></a></li>
-            </ul>
-        </div><!-- end Slider -->       
+      <!-- About -->
+      <div class="entry-content clearfix">
+        <h3 id="about" class="anchor">About</h3>
+        <p class="justify">
+          <i>The Lambda Calculator</i>is an interactive, graphical application
+          to help students of natural language semantics practice derivations
+          in the typed lambda calculus. It is designed for both students and
+          teachers, with modules for online classroom instruction, graded
+          homework assignments, and self-guided practice. The primary function
+          is to assist in the computation of natural language denotations up a
+          syntactic tree in the style of Heim &amp; Kratzer (1998). To this
+          end, the program detects common errors and attempts to provide
+          intelligent feedback to the student user and a record of performance
+          for the instructor.
+        </p>
+      </div>
+      <!-- end About -->
+
+      <!-- big screenshot carousel -->
+      <div id="cbp-fwslider" class="cbp-fwslider">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="images/sshot1.png" alt="img01" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/sshot2.png" alt="img02" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/sshot3.png" alt="img03" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- end carousel -->
+
     </div>
-    
-    <div class="site-content" role="main">    
-        <div class="entry-content clearfix" style="padding-top:1em;">
-            <h3 id="features" class="anchor">Features</h3>
+    <!-- end first content block -->
+
+    <!-- second content block: features -->
+    <div class="site-content" role="main">
+
+      <!-- Features -->
+      <div class="entry-content clearfix" style="padding-top:1em;">
+        <h3 id="features" class="anchor">Features</h3>
+        <p>
+          This split-screen video of a talk on
+          <a href="http://ling.auf.net/lingbuzz/002118"> the interaction of
+          compositional semantics and event semantics</a> gives an impression
+          of many of the features of the calculator and how it can be
+          dynamically integrated into presentations. The calculator is used
+          starting at 17:39 to step through various derivations. (Thanks to
+          Kristina Liefke and Roland Poellinger of the
+          <a href="http://www.mcmp.philosophie.uni-muenchen.de/index.html">MCMP
+          </a>for providing the video.)
+        </p>
+        <!-- youtube demo video -->
+        <div style="text-align:center">
+          <iframe width="560" height="315"
+                  src="http://www.youtube.com/embed/21KxSsIceNg" frameborder="0">
+          </iframe>
+        </div>
+        <!-- end youtube video -->
+        <br><br>
+        <p class="justify">
+          The core of the program is described in our contribution to the
+          proceedings of GEAF 2007:
+          <br>
+          <span style="display:block; margin:0.5em 4em; color:#807f7f; line-height:1.25;">
+            Champollion, L., J. Tauberer and M. Romero (2007). "The Penn
+            Lambda Calculator: Pedagogical Software for Natural Language
+            Semantics", in T. Holloway King and E. M. Bender (eds.),
+            Proceedings of the Grammar Engineering across Frameworks (GEAF)
+            2007 Workshop, July 13-15 2007. CSLI On-line Publications [<a
+            href="http://ling.upenn.edu/~champoll/lambda-geaf.pdf">PDF</a>]
+          </span>
+        </p>
+
+        <p>A sample of the features discussed there:</p>
+
+        <!-- Feature highlights -->
+
+        <!-- interactive exercises -->
+        <div class="featurerow clearfix">
+          <div class="featurerow-left">
+            <img src="images/interactive.png" alt="Interactive" title="Interactive" />
+          </div>
+          <div class="featurerow-right">
+            <h5>Interactive Exercises</h5>
             <p>
-            This split-screen video of a talk on
-            <a href="http://ling.auf.net/lingbuzz/002118">
-              the interaction of compositional semantics and event semantics
-            </a> gives an impression of
-            many of the features of the calculator and how it can be
-            dynamically integrated into presentations. The calculator is used
-            starting at 17:39 to step through various derivations.
-            (Thanks to Kristina Liefke and Roland Poellinger of the
-            <a href="http://www.mcmp.philosophie.uni-muenchen.de/index.html">
-              MCMP
-            </a> for providing the video.)
+              Students progress through pre-prepared exercise files, checking
+              types and reducing lambda terms. As they go, their answers are
+              evaluated for correctness, and the program gives feedback.
             </p>
-            <div style="text-align:center">
-              <iframe width="560" height="315" align="middle"
-                      src="http://www.youtube.com/embed/21KxSsIceNg"
-                      frameborder="0" allowfullscreen>
-              </iframe>
-            </div>
-            <br>
-            <p class="justify">The core of the program is described in our contribution to the proceedings of GEAF 2007:
-            <br>
-            <span style="display:block; margin:0.5em 4em; color:#807f7f; line-height:1.25;">Champollion, L., J. Tauberer and M. Romero (2007).
-                "The Penn Lambda Calculator: Pedagogical Software for Natural Language Semantics", in T. Holloway King and
-                E. M. Bender (eds.), Proceedings of the Grammar Engineering across Frameworks (GEAF) 2007 Workshop,
-                July 13-15 2007. CSLI On-line Publications
-                [<a href="http://ling.upenn.edu/~champoll/lambda-geaf.pdf">PDF</a>]
-            </span>
-            
-            <p>A sample of the features discussed there:</p>
-            
-            <div class="featurerow clearfix">
-                <div class="featurerow-left">
-                <img src="images/interactive.png"
-                     alt="Interactive"
-                     title="Interactive"/>
-                </div>
-                <div class="featurerow-right">
-                <h5>Interactive Exercises</h5>
-                <p>Students progress through pre-prepared exercise files, checking types and reducing lambda terms. As they go,
-                    their answers are evaluated for correctness, and the program gives feedback.</p>
-                </div>
-            </div>
-            <div class="featurerow clearfix">
-                <div class="featurerow-right">
-                <img src="images/visual.png"
-                             alt="Visual"
-                             title="Visual"/>
-                </div>
-                <div class="featurerow-left">
-                <h5>Visual Derivations</h5>
-                <p>Instructors can present bottom-up derivations step-by-step. At any point, derivations may be interrupted or rewound,
-                    or re-run with modified lexical entries.</p>
-                </div>
-            </div>
-            <div class="featurerow clearfix">
-                <div class="featurerow-left">
-                <img src="images/teacher-tool.png"
-                             alt="Scoring"
-                             title="Scoring"/>
-                </div>
-                <div class="featurerow-right">
-                <h5>Grade Management</h5>
-                <p>Students may submit completed work electronically, which is automatically scored by the calculator.</p>
-                </div>
-            </div>
-            <div class="featurerow clearfix">
-                <div class="featurerow-right">
-                <img src="images/feedback.png"
-                             alt="Feedback"
-                             title="Feedback"/>
-                </div>
-                <div class="featurerow-left">
-                <h5>Immediate Feedback</h5>
-                <p>Students receive feedback after each step of a derivation or reduction. When they make mistakes, the program
-                    attempts to guess what went wrong and provide suggestions.</p>
-                </div>
-            </div>
-<!--            <div class="featurerow clearfix">
-                <div class="featurerow-left">
-                <img src="images/type-driven.png"
-                         alt="Type-driven"
-                         title="Type-driven"/>
-                </div>
-                <div class="featurerow-right">
-                <h5>Type-Driven Composition</h5>
-                <p></p>
-                </div>
-            </div>-->
-            <div class="featurerow clearfix">
-                <div class="featurerow-left">
-                <img src="images/latex.png"
-                         alt="LaTeX"
-                         title="LaTeX"/>
-                </div>
-                <div class="featurerow-right">
-                <h5>Export to LaTeX</h5>
-                <p>The program provides an option to export any tree as LaTeX source code, in a format accepted by Qtree and tikz-qtree.</p>
-                </div>
-            </div>
-            <p class="justify" style="margin-top:3em;"><strong>NEWS:</strong> Thanks to an
-                <a href="http://www.nyu.edu/faculty/funding-opportunities/curricular-development-challenge-fund.html">NYU CDCF</a>
-                grant awarded in the spring of 2013, the latest release (v2.0.0-beta) includes flexibility for types in a variety of uses:
-            </p>
-            <ul>
-                <li>More flexible composition rules, including <strong>Predicate Modification</strong> and
-                    <strong>Intensional Function Application</strong></li>
-                <li>Traces and Lambda Abstractions over <strong>arbitrarily-typed indices</strong></li>
-                <li>Type variables for <strong>polymorphic</strong> lexical items and combinators</li>
-            </ul>
-        </div><!-- end #Features -->
+          </div>
+        </div>
 
-        <div class="entry-content clearfix" style="padding-top:1em;">
-
-            <h3 id="testimonials" class="anchor">Testimonials</h3>
-
-            <blockquote>
+        <!-- visual derivations -->
+        <div class="featurerow clearfix">
+          <div class="featurerow-right">
+            <img src="images/visual.png" alt="Visual" title="Visual" />
+          </div>
+          <div class="featurerow-left">
+            <h5>Visual Derivations</h5>
             <p>
+              Instructors can present bottom-up derivations step-by-step. At
+              any point, derivations may be interrupted or rewound, or re-run
+              with modified lexical entries.
+            </p>
+          </div>
+        </div>
+
+        <!-- grade management -->
+        <div class="featurerow clearfix">
+          <div class="featurerow-left">
+            <img src="images/teacher-tool.png" alt="Scoring" title="Scoring" />
+          </div>
+          <div class="featurerow-right">
+            <h5>Grade Management</h5>
+            <p>
+              Students may submit completed work electronically, which is
+              automatically scored by the calculator.
+            </p>
+          </div>
+        </div>
+
+        <!-- immediate feedback -->
+        <div class="featurerow clearfix">
+          <div class="featurerow-right">
+            <img src="images/feedback.png" alt="Feedback" title="Feedback" />
+          </div>
+          <div class="featurerow-left">
+            <h5>Immediate Feedback</h5>
+            <p>
+              Students receive feedback after each step of a derivation or
+              reduction. When they make mistakes, the program attempts to guess
+              what went wrong and provide suggestions.
+            </p>
+          </div>
+        </div>
+
+        <!-- export to latex -->
+        <div class="featurerow clearfix">
+          <div class="featurerow-left">
+            <img src="images/latex.png" alt="LaTeX" title="LaTeX" />
+          </div>
+          <div class="featurerow-right">
+            <h5>Export to LaTeX</h5>
+            <p>
+              The program provides an option to export any tree as LaTeX
+              source code, in a format accepted by Qtree and tikz-qtree.
+            </p>
+          </div>
+        </div>
+
+        <!-- end feature highlights -->
+
+        <p class="justify" style="margin-top:3em;">
+          <strong>NEWS:</strong>Thanks to an <a
+            href="http://www.nyu.edu/faculty/funding-opportunities/curricular-development-challenge-fund.html">NYU CDCF</a> grant awarded in the spring of 2013, the latest release
+          (v2.0.0-beta) includes flexibility for types in a variety of uses:
+        </p>
+        <ul>
+          <li>More flexible composition rules, including
+            <strong>Predicate Modification</strong>and
+            <strong>Intensional Function Application</strong>
+          </li>
+          <li>Traces and Lambda Abstractions over
+            <strong>arbitrarily-typed indices</strong>
+          </li>
+          <li>Type variables for
+            <strong>polymorphic</strong>lexical items and combinators</li>
+        </ul>
+
+      </div>
+      <!-- end Features -->
+
+      <!-- Testimonials -->
+      <div class="entry-content clearfix" style="padding-top:1em;">
+        <h3 id="testimonials" class="anchor">Testimonials</h3>
+        <blockquote>
+          <p>
             [The Calculator] covers most of the common ground of formal
             semantics and it is great fun using it, and the notation is
-            compatible with many introductions to semantics, e.g. the book
-            of Heim and Kratzer. Students working with that tool will love
-            it and possibly fall in love with formal semantics of natural
-            language. I always wanted to have such a tool for my teaching.
-            </p>
-            <footer>
-                <cite>Arnim von Stechow, Professor Emeritus,
-                  Department of General Linguistics, T&uuml;bingen,
-                  Germany</cite>
-            </footer>
-            </blockquote>
+            compatible with many introductions to semantics, e.g. the book of
+            Heim and Kratzer. Students working with that tool will love it and
+            possibly fall in love with formal semantics of natural language. I
+            always wanted to have such a tool for my teaching.
+          </p>
+          <footer>
+            <cite>Arnim von Stechow, Professor Emeritus, Department of General
+              Linguistics, T&uuml;bingen, Germany</cite>
+          </footer>
+        </blockquote>
 
-            <blockquote>
-            <p>
-            I learned about the program toward the middle of the semester,
-            but once I knew about and briefly tested it, I did not
-            hesitate to introduce it to the class. [...] Had I known
-            about the program before I prepared my syllabus for the class,
-            I definitely would have designed my class so that we can make
-            use of the program more extensively.  I would recommend PLC to
-            anyone who is willing to explore some better ways to teach and
-            learn the sometimes tedious and confusing work of lambda
-            derivations.
-            </p>
-            <footer>
-                <cite>Jae-Woong Choe, Professor, Department of
-                  Linguistics, Korea University, Seoul</cite>
-            </footer>
-            </blockquote>
+        <blockquote>
+          <p>
+            I learned about the program toward the middle of the semester, but
+            once I knew about and briefly tested it, I did not hesitate to
+            introduce it to the class. [...] Had I known about the program
+            before I prepared my syllabus for the class, I definitely would
+            have designed my class so that we can make use of the program more
+            extensively. I would recommend PLC to anyone who is willing to
+            explore some better ways to teach and learn the sometimes tedious
+            and confusing work of lambda derivations.
+          </p>
+          <footer>
+            <cite>Jae-Woong Choe, Professor, Department of Linguistics, Korea
+              University, Seoul</cite>
+          </footer>
+        </blockquote>
 
-            <blockquote>
-            <p>
-            I wished it had already existed at the moment when I made my
-            first steps in formal semantics; certainly, I would have
-            learned  faster and easier. One can only master the lambda
-            calculus (and formal linguistics in general) by getting one's
-            hands dirty, that is, by experimenting and testing. The
-            calculator provides students with hints and immediate feedback
-            whether their proposed solution is correct or not.
-            </p>
-            <footer>
-                <cite>Gerhard Schaden, Ma&icirc;tre de Conf&eacute;rences,
-                  Universit&eacute; Lille 3 Charles de Gaulle, Paris</cite>
-            </footer>
-            </blockquote>
+        <blockquote>
+          <p>
+            I wished it had already existed at the moment when I made my first
+            steps in formal semantics; certainly, I would have learned faster
+            and easier. One can only master the lambda calculus (and formal
+            linguistics in general) by getting one's hands dirty, that is, by
+            experimenting and testing. The calculator provides students with
+            hints and immediate feedback whether their proposed solution is
+            correct or not.
+          </p>
+          <footer>
+            <cite>Gerhard Schaden, Ma&icirc;tre de Conf&eacute;rences,
+              Universit&eacute; Lille 3 Charles de Gaulle, Paris</cite>
+          </footer>
+        </blockquote>
 
-            <blockquote>
-            <p>
-            I am very grateful for your having the Penn Lambda Calculator
-            so generously available to teachers and students of Formal
-            Semantics.  As an instructor of a graduate-level course using
-            Heim &amp; Kratzer (1998), I can attest how invaluable this
-            resource has been for both me and my students as well.  The
-            lambda notation is not easy for students who, despite their
-            linguistics training, are not familiar with the formal
-            apparatus of set theory, propositional calculus and predicate
-            logic.  As I teach to Spanish-speaking students, it adds to
-            the inherent difficulty of the subject the fact that the
-            textbooks and the exercises included are mostly in English.
-            With the lambda calculator I can create exercises using
-            lexicon (and instructions) in Spanish that allow my students
-            to practice how to simplify lambda expressions and calculate
-            the denotations of syntactic trees at home.  In the classroom
-            it makes it possible to discuss problems that will take
-            forever otherwise.
-            </p>
-            <footer>
-                <cite>Hilton Alers, Associate Professor, University of
-                  Puerto Rico</cite>
-            </footer>
-            </blockquote>
+        <blockquote>
+          <p>
+            I am very grateful for your having the Penn Lambda Calculator so
+            generously available to teachers and students of Formal Semantics.
+            As an instructor of a graduate-level course using Heim &amp;
+            Kratzer (1998), I can attest how invaluable this resource has been
+            for both me and my students as well. The lambda notation is not
+            easy for students who, despite their linguistics training, are not
+            familiar with the formal apparatus of set theory, propositional
+            calculus and predicate logic. As I teach to Spanish-speaking
+            students, it adds to the inherent difficulty of the subject the
+            fact that the textbooks and the exercises included are mostly in
+            English. With the lambda calculator I can create exercises using
+            lexicon (and instructions) in Spanish that allow my students to
+            practice how to simplify lambda expressions and calculate the
+            denotations of syntactic trees at home. In the classroom it makes
+            it possible to discuss problems that will take forever otherwise.
+          </p>
+          <footer>
+            <cite>Hilton Alers, Associate Professor, University of Puerto
+              Rico</cite>
+          </footer>
+        </blockquote>
 
-            <blockquote>
-            <p>
-            I found the Calculator especially helpful for the individual
-            training of students during recitations. It allowed each of
-            them to follow their own pace. Students were all very positive
-            about using it mostly because it is an interactive tool and
-            provides intelligent feedback. The course is based on the Heim
-            and Kratzer 1998 textbook <i>Semantics in Generative
-              Grammar</i> which makes the tool a very valuable asset not only
-            because it is designed to accompany that textbook but also
-            because the textbook itself puts an accent on practice and
-            exercise for mastering the calculating techniques and
-            internalizing the principles behind them. In short, this is an
-            excellent pedagogical tool which I will continue using in my
-            future work.
-            </p>
-            <footer>
-                <cite>Penka Stateva, Assistant Professor, University of
-                  Nova Gorica</cite>
-            </footer>
-            </blockquote>
+        <blockquote>
+          <p> I found the Calculator especially helpful for the individual
+          training of students during recitations. It allowed each of them to
+          follow their own pace. Students were all very positive about using
+          it mostly because it is an interactive tool and provides intelligent
+          feedback. The course is based on the Heim and Kratzer 1998 textbook
+          <i>Semantics in Generative Grammar </i>which makes the tool a very
+          valuable asset not only because it is designed to accompany that
+          textbook but also because the textbook itself puts an accent on
+          practice and exercise for mastering the calculating techniques and
+          internalizing the principles behind them. In short, this is an
+          excellent pedagogical tool which I will continue using in my future
+          work.  </p>
+          <footer>
+            <cite>Penka Stateva, Assistant Professor, University of Nova
+              Gorica</cite>
+          </footer>
+        </blockquote>
 
-            <blockquote>
-            <p>
-            The software is groundbreaking and ingenious &mdash; no one has
-            written anything like it before and it is well-designed to fit
-            into a formal semantics course.  I especially like the
-            guidance it gives students when they make mistakes &mdash; that was
-            a very clever feature.
-            </p>
-            <footer>
-                <cite>Ezra Keshet,  Assistant Professor, University of
-                  Michigan </cite>
-            </footer>
-            </blockquote>
+        <blockquote>
+          <p> The software is groundbreaking and ingenious &mdash; no one has
+          written anything like it before and it is well-designed to fit into
+          a formal semantics course. I especially like the guidance it gives
+          students when they make mistakes &mdash; that was a very clever
+          feature.</p>
+          <footer>
+            <cite>Ezra Keshet, Assistant Professor, University of
+              Michigan</cite>
+          </footer>
+        </blockquote>
 
-        </div> <!-- end #testimonials -->
+      </div>
+      <!-- end Testimonials -->
+
     </div>
-    
-    <div class="site-content final-section" role="main">   
-        <div class="entry-content clearfix" style="padding-top:1px;">
-            <h3 id="download" class="anchor">Downloading and Installing</h3>
-            <p>You can download the current student version 2.0.0-beta (April 1, 2014; <a href="ChangeLog.txt">Change Log</a>)
-                by clicking the icon for your operating system below. Note that this version is under active development, and is likely
-                to display unintended behavior at times. It is also likely to run more smoothly if your Java is up to date (more on Java
-                <a href="#java">just below</a>).
-            </p>
+    <!-- end second content block -->
 
-            <h6><strong>Latest Beta Release:</strong></h6>
-            <div class="top-level dialog wide download">
-                <div class="text-center">
-                    <a class="button" href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE-2.0.0.zip">
-                        <i class="fa fa-apple fa fa-3x"></i>Mac OSX
-                    </a>
-                    <a class="button" href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE-2.0.0.exe">
-                        <i class="fa fa-windows fa fa-3x"></i>Windows
-                    </a>
-                    <a class="button" href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE-2.0.0.jar">
-                        <i class="fa fa-linux fa fa-3x"></i>Linux
-                    </a>
-                </div>
-            </div>
+    <!-- third content block: download, exercises, miscellaneous info -->
+    <div class="site-content final-section" role="main">
 
-            <div style="font-size:125%">Alternative stable release for 
-            <a
-              href="https://github.com/dylnb/LambdaCalculator/releases/download/v1.0.12/LambdaCalculatorSE-1.0.12.exe">
-              Windows
-            </a> and
-            <a
-              href="https://github.com/dylnb/LambdaCalculator/releases/download/v1.0.12/LambdaCalculatorSE-1.0.12.jar">
-              Mac/Linux
+      <!-- Download -->
+      <div class="entry-content clearfix" style="padding-top:1px;">
+        <h3 id="download" class="anchor">Downloading and Installing</h3>
+        <p>
+          You can download the current student version 2.0.0-beta (April 1,
+          2014; <a href="ChangeLog.txt">Change Log</a>) by clicking the icon
+          for your operating system below. Note that this version is under
+          active development, and is likely to display unintended behavior at
+          times. It is also likely to run more smoothly if your Java is up to
+          date (more on Java <a href="#java">just below</a>).
+        </p>
+
+        <h6><strong>Latest Beta Release:</strong></h6>
+        <!-- download buttons -->
+        <div class="top-level dialog wide download">
+          <div class="text-center">
+            <a class="button" href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE-2.0.0.zip">
+              <i class="fa fa-apple fa fa-3x"></i>Mac OSX
             </a>
-            </div>
-            
-            <br/><br/>
+            <a class="button" href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE-2.0.0.exe">
+              <i class="fa fa-windows fa fa-3x"></i>Windows
+            </a>
+            <a class="button" href="https://github.com/dylnb/LambdaCalculator/releases/download/v2.0.0-beta/LambdaCalculatorSE-2.0.0.jar">
+              <i class="fa fa-linux fa fa-3x"></i>Linux
+            </a>
+          </div>
+        </div>
+        <!-- end download buttons -->
 
-            <p>For Mac and Windows: just download and double-click to start.  If you are running OS X 10.7.5 (Mountain Lion) or later, you may
-            need to temporarily relax your security settings to open the application, since it is not from the Mac App Store. In System
-            Preferences > Security &amp; Privacy > General, set "Allow applications downloaded from:" to "Anywhere". After opening and
-            quitting the app once, you may adjust the setting as you like. For Linux: start with <code>java -jar LambdaCalculator.jar</code>,
-            but make sure you run it with Sun's Java, not GNU libgcj.  You can check which version you have with <code>java -version</code>.
-            </p>
-        
-            <h5 id="java">Installing Java</h5>
-            <p>Windows and Linux users will need to make sure they have the <a href="http://www.java.com/getjava">Java JRE</a> 1.6 or
-                newer installed. The Windows version of the calculator will check on startup if Java is installed, and if necessary,
-                will take the user to a website where Java can be downloaded.
-            </p>
-                
-            <p>Apple's Java comes pre-installed on Mac OS X 10.6 and below, but this practice was discontinued beginning with OS X 10.7 (Lion).
-                To get the latest Java 7 from Oracle, you will need 10.7.3 or later. If you already have Java 7 installed, you will see a
-                Java icon under System Preferences. Java versions 6 and below are listed in the Java Preferences.app located in the
-                Applications > Utilities folder on your Mac. <a href="http://www.java.com/en/download/faq/java_mac.xml">This page</a> contains
-                more information on how to install and/or update Java for OS X.
-            </p>
-            
-            <h5>Teacher Edition</h5>
-            <p>The teacher edition, in which tree-derivation exercises can be shown in
-                a presentation mode that automatically computes denotations of nonterminals,
-                is available upon request to instructors. Please send an email to:
-                <img src="images/email.png" alt="" style="inline; vertical-align:middle;"/>
-            </p>
-        </div><!-- end Download -->
+        <div style="font-size:125%">Alternative stable release for
+          <a href="https://github.com/dylnb/LambdaCalculator/releases/download/v1.0.12/LambdaCalculatorSE-1.0.12.exe">
+            Windows
+          </a>and
+          <a href="https://github.com/dylnb/LambdaCalculator/releases/download/v1.0.12/LambdaCalculatorSE-1.0.12.jar">
+            Mac/Linux
+          </a>
+        </div>
 
-        <div class="entry-content clearfix">
-            <h3 id="exercises" class="anchor">Sample Exercises</h3>
-            <p>These documents provide some basic exercises to get you started. Just download any of the files above (or copy and save the text
-                to a blank text file of your choosing). Then run the Lambda Calculator, select Open from the Menu Bar, and open the exercise file
-                you saved.
-            </p>
-            <p>If you are an instructor, email us, and we will be happy to send you more exercise files. And if you write exercise files yourself,
-                please consider sending them to us so we can share them with other instructors.
-            </p>
-            <div id="examples">
-            <p>
-                <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example1.txt">
-                    <i class="fa fa-file-text-o fa-2x"></i>
-                </a>
-                Examples of 'semantic types' and 'lambda conversion' exercises
-            </p>
-            <p>
-                <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example2.txt">
-                    <i class="fa fa-file-text-o fa-2x"></i>
-                </a>
-                Examples of bottom-up tree derivation exercises
-            </p>
-            <p>
-                <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example3.txt">
-                    <i class="fa fa-file-text-o fa-2x"></i>
-                </a>
-                Examples of using bottom-up tree derivations with generalized quantifiers (including set notation). 
-            </p>
-            </div>
-            <div class="grab text-center">You can find many more examples at the calculator's
-                <a href="https://github.com/dylnb/LambdaCalculator/wiki">Wiki</a></div>
-        </div><!-- end Sample Exercises -->
-        
-        <div class="entry-content clearfix">
-            <h3 id="issues" class="anchor">Issues and Suggestions</h3>
-            <p>The calculator is under active development, and may exhibit unexpected behavior from time to time, especially if you're using one
-                of the Beta releases. If you encounter something strange, or would like to see some additional functionality, we're all ears.
-                Our bug reports and feature requests are managed through on our <a href="https://github.com/dylnb/LambdaCalculator/issues">Github
-                Issues</a> page. Please take a look at the open issues to see
-                if your problem has already been reported (and if so, to check the progress on fixing it). You can report new issues or make new
-                requests directly through the Issues page, if you have a registered Github account. Otherwise, just shoot us an email
-                (<img src="images/email.png" alt="" style="inline; vertical-align:middle;"/>), and we'll create a ticket that you can monitor for updates.
-                In either case, include any information you can that will help us reproduce the problem, including exercise files, screenshots, and
-                information about your operating system and the version of the calculator that you're using.</p>
-        </div><!-- end Issues -->
-        
-        <div class="entry-content clearfix">
-            <h3>More Information</h3>
-            <p>Detailed instructions, sample exercises, frequently asked questions, and bug-reports are all available
-                at this project's <a href="https://github.com/dylnb/LambdaCalculator/wiki">Github Wiki</a>. We are
-                <b>very interested</b> in hearing about your experience with the
-                Lambda Calculator, and about potential ideas for improvement, so please either head over to the wiki if you have questions
-                or suggestions, or send us an email.
-            </p>
-            <br><br><br>
-        </div><!-- end #More Info -->      
-        
-        <div class="peachlam"></div>
+        <br>
+        <br>
+
+        <p>
+          For Mac and Windows: just download and double-click to start. If you
+          are running OS X 10.7.5 (Mountain Lion) or later, you may need to
+          temporarily relax your security settings to open the application,
+          since it is not from the Mac App Store. In System Preferences >
+          Security &amp; Privacy > General, set "Allow applications downloaded
+          from:" to "Anywhere". After opening and quitting the app once, you
+          may adjust the setting as you like. For Linux: start with <code>java
+          -jar LambdaCalculator.jar</code>, but make sure you run it with
+          Sun's Java, not GNU libgcj. You can check which version you have with
+          <code>java -version</code>.
+        </p>
+
+        <h5 id="java">Installing Java</h5>
+        <p>
+          Windows and Linux users will need to make sure they have the <a
+            href="http://www.java.com/getjava">Java JRE</a> 1.6 or newer
+          installed. The Windows version of the calculator will check on
+          startup if Java is installed, and if necessary, will take the user
+          to a website where Java can be downloaded.
+        </p>
+
+        <p>
+          Apple's Java comes pre-installed on Mac OS X 10.6 and below, but
+          this practice was discontinued beginning with OS X 10.7 (Lion). To
+          get the latest Java 7 from Oracle, you will need 10.7.3 or later. If
+          you already have Java 7 installed, you will see a Java icon under
+          System Preferences. Java versions 6 and below are listed in the Java
+          Preferences.app located in the Applications > Utilities folder on
+          your Mac. <a href="http://www.java.com/en/download/faq/java_mac.xml">
+          This page</a> contains more information on how to install and/or
+          update Java for OS X.
+        </p>
+
+        <h5>Teacher Edition</h5>
+        <p>
+          The teacher edition, in which tree-derivation exercises can be shown
+          in a presentation mode that automatically computes denotations of
+          nonterminals, is available upon request to instructors. Please send an
+          email to:
+          <img src="images/email.png" alt="" style="inline; vertical-align:middle;"/>
+        </p>
+      </div>
+      <!-- end Download -->
+
+      <div class="entry-content clearfix">
+        <h3 id="exercises" class="anchor">Sample Exercises</h3>
+        <p>
+          These documents provide some basic exercises to get you started.
+          Just download any of the files above (or copy and save the text to a
+          blank text file of your choosing). Then run the Lambda Calculator,
+          select Open from the Menu Bar, and open the exercise file you saved.
+        </p>
+
+        <p>
+          If you are an instructor, email us, and we will be happy to send you
+          more exercise files. And if you write exercise files yourself,
+          please consider sending them to us so we can share them with other
+          instructors.
+        </p>
+
+        <div id="examples">
+          <p>
+            <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example1.txt">
+              <i class="fa fa-file-text-o fa-2x"></i>
+            </a>
+            Examples of 'semantic types' and 'lambda conversion' exercises
+          </p>
+          <p>
+            <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example2.txt">
+              <i class="fa fa-file-text-o fa-2x"></i>
+            </a>
+            Examples of bottom-up tree derivation exercises
+          </p>
+          <p>
+            <a href="https://raw.github.com/dylnb/LambdaCalculator/master/examples/example3.txt">
+              <i class="fa fa-file-text-o fa-2x"></i>
+            </a>
+            Examples of using bottom-up tree derivations with generalized
+            quantifiers (including set notation).
+          </p>
+        </div>
+        <div class="grab text-center">
+          You can find many more examples at the calculator's <a
+            href="https://github.com/dylnb/LambdaCalculator/wiki/Exercise-Files">
+            Wiki</a>
+        </div>
+      </div>
+      <!-- end Sample Exercises -->
+
+      <!-- Issues -->
+      <div class="entry-content clearfix">
+        <h3 id="issues" class="anchor">Issues and Suggestions</h3>
+        <p>
+          The calculator is under active development, and may exhibit
+          unexpected behavior from time to time, especially if you're using
+          one of the Beta releases. If you encounter something strange, or
+          would like to see some additional functionality, we're all ears. Our
+          bug reports and feature requests are managed through on our
+          <a href="https://github.com/dylnb/LambdaCalculator/issues">Github
+            Issues</a> page. Please take a look at the open issues to see if
+          your problem has already been reported (and if so, to check the
+          progress on fixing it). You can report new issues or make new
+          requests directly through the Issues page, if you have a registered
+          Github account. Otherwise, just shoot us an email (<img
+          src="images/email.png" alt="" style="inline; vertical-align:middle;"/>),
+          and we'll create a ticket that you can monitor for updates. In
+          either case, include any information you can that will help us
+          reproduce the problem, including exercise files, screenshots, and
+          information about your operating system and the version of the
+          calculator that you're using.
+        </p>
+      </div>
+      <!-- end Issues -->
+
+      <!-- More Information -->
+      <div class="entry-content clearfix">
+        <h3>More Information</h3>
+        <p>
+          Detailed instructions, sample exercises, frequently asked questions,
+          and bug reports are all available at this project's <a
+            href="https://github.com/dylnb/LambdaCalculator/wiki">Github
+          Wiki</a>. We are <b>very interested</b> in hearing about your
+          experience with the Lambda Calculator, and about potential ideas for
+          improvement, so please either head over to the wiki if you have
+          questions or suggestions, or send us an email.
+        </p>
+        <br>
+        <br>
+        <br>
+      </div>
+      <!-- end More Info -->
+
+      <div class="peachlam"></div>
+
     </div>
-    
-    <!--
-        <div class="entry-content clearfix">
-            <h3>Sample Exercise Files</h3>
-            <p>We have three example exercise files:</p>
-            <div style="margin-left: 2em">
-                <p><a href="example1.txt">example1.txt</a>: Examples of 'semantic types' and 'lambda conversion' exercises.</p>
-                <p><a href="example2.txt">example2.txt</a>: Examples of bottom-up tree derivation exercises.</p>
-                <p><a href="example3.txt">example3.txt</a>: Examples of using bottom-up tree derivations with generalized quantifiers (including set notation).</p>
-                <p>You can download these and then open them in the <i>Penn Lambda Calculator</i> to try them out.
-                To download the files, right-click the link (on a PC) or control-click (on a Mac?) and choose "Save Link As..." to save the file to your computer.
-                Remember where you saved the file. Then (download and) run the <i>Penn Lambda Calculator</i>.
-                Choose the Interactive Exercise Solver, and in the File menu, choose Open, and
-                open the exercise file you downloaded.
-                </p>
-            </div>
-            <p>
-            If you are an instructor, email us, and we will be happy to send you more exercise files. And if you
-            write exercise files yourself, please consider sending them to us so we can
-            share them with other instructors.
-            </p>
-        </div>
-    
-        <div class="entry-content clearfix">
-            <h3>Documentation</h3>
-            <p><b>For students and instructors:</b> When typing predicate logic
-            expressions in the program, some special keyboard combinations are
-            used to enter logical symbols. See the <a href="specialsymbols.html">guide
-            to entering special symbols</a> for instructions. Some help is also
-            provided within the program.</p>
-            
-            <p><b>For instructors:</b> If you would like to write an exercise file, 
-            you may read the <a href="exercisefiles.html">documentation for the exercise file format</a>
-            or consult the <a href="example0.txt">complete and documented sample exercise file for instructors</a>.</p>
-            
-            <h3>A Note on Operator Precedence</h3>
-            
-            <p>The Penn Lambda Calculator lets lambda abstraction take precedence over 
-            function application. This is the opposite convention as the one used in 
-            Heim and Kratzer (1998). Thanks to Irene Heim for pointing this out.</p> 
-            
-            <p>For example, our system parses 
-            &quot;&lambda;y&lambda;x.[R(x,y)](a)(b)&quot; as &quot;[ [ 
-            &lambda;y&lambda;x.R(x,y) ] (a) ] (b)&quot; rather than as &quot;[ 
-            &lambda;y [ [&lambda;x.R(x,y)] (a) ] ] (b)&quot;. Specifically, the latter 
-            case is ruled out because it would result in the lambda abstraction headed 
-            by &lambda;y having as its body an instance of function application, i.e. 
-            &quot;[[&lambda;x.R(x,y)] (a) ]&quot;. The same precedence rule holds of 
-            variable binders other than lambdas, specifically quantifiers and iota 
-            operators.</p>
-            
-            <p>There is, however, an exception to this rule: Although the relations 
-            between atomic predicates and their arguments are semantically interpreted 
-            as function application, they nevertheless take precedence over lambda 
-            abstraction, and in fact over all other operators. This is so that 
-            &quot;&lambda;x.P(x)&quot; is parsed as &quot;&lambda;x.[P(x)]&quot; and 
-            not as &quot;[&lambda;x.P](x)&quot;. This also applies to 
-            Sch&ouml;nfinkelized 
-            predicates; e.g. the expression &quot;&lambda;x.R(x)(a)&quot; is parsed as 
-            &quot;&lambda;x.[R(x)(a)]&quot;.
-            </p>
-        </div>
-    -->
+    <!-- end third content block -->
 
-<!--
-<hr size="1" style="margin-top: 1.5em; margin-bottom: 1.5em"/>
-<center>
+  </div>
+  <!-- end all site content -->
+  <script type="text/javascript">
+    var gaJsHost =
+      (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost +
+      "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1637572-2");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery.cbpFWSlider.min.js"></script>
+  <script>
+    $(function() {
+      $('#cbp-fwslider').cbpFWSlider();
+    });
+  </script>
 
-<a
-href="http://www3.clustrmaps.com/counter/maps.php?url=http://www.ling.upenn.edu/lambda"
-id="clustrMapsLink"><img
-src="http://www3.clustrmaps.com/counter/index2.php?url=http://www.ling.upenn.edu/lambda"
-style="border:0px;" alt="Locations of visitors to this page"
-title="Locations of visitors to this page" id="clustrMapsImg"
-onError="this.onError=null;
-this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg';
-document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'"
-/>
-</a>
-</center>
--->
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
-"http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost +
-"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-1637572-2");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/jquery.cbpFWSlider.min.js"></script>
-<script>
-    $( function() {
-        /*
-        - how to call the plugin:
-        $( selector ).cbpFWSlider( [options] );
-        - options:
-        {
-            // default transition speed (ms)
-            speed : 500,
-            // default transition easing
-            easing : 'ease'
-        }
-        - destroy:
-        $( selector ).cbpFWSlider( 'destroy' );
-        */
-
-        $( '#cbp-fwslider' ).cbpFWSlider();
-
-    } );
-</script>
-    
 </body>
+
 </html>
 

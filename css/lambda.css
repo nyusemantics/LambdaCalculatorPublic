@@ -202,9 +202,13 @@ a:hover {
 .cbp-fwslider a, #navbar a, #masthead a {
     border-bottom: none;
 }
+.cbp-fwslider ul {
+  width: 500%;
+  transition: -webkit-transform 500ms ease;
+  -webkit-transition: -webkit-transform 500ms ease;
+}
 
-table th,
-dl dt {
+table th, dl dt {
 	color: #4f5759;
 }
 
