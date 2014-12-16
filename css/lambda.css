@@ -513,19 +513,19 @@ background: url(../images/interactive.png) no-repeat;
 cursor: pointer;
 }
 
-#examples {
+.examples {
     margin: 0 0 2em 4em;
 }
-#examples a {
+.examples a {
   position: relative;
   text-decoration: none;
   border-bottom: none;
   margin-right: 1em;
 }
-#examples a:hover::after {
+.examples a:hover::after {
   border-bottom-color: #eb7a77
 }
-#examples a::after {
+.examples a::after {
   border-bottom: 1px dashed rgb(110, 208, 136);
   bottom: -6px;
   content: '';
@@ -534,7 +534,7 @@ cursor: pointer;
   position: absolute;
   right: 0;
 }
-#examples a {
+.examples a {
     
 }
 
