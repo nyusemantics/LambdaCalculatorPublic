@@ -1,3 +1,28 @@
+2015-12-07: Version 2.1.0
+-------------------------
+
+* replace [[ ]] with << >>
+* choose variables based on indices, eliminating need for (explicitly
+represented) assignment fns
+* functions wrapped in [ ] instead of ( )
+* bracketing conventions now match Heim and Kratzer
+* add support for *-ed constants
+* add individual-level fusion, via +, and part-of, via <:
+(with Ctrl-: as interactive keyboard shortcut)
+* single-letter identifiers off by default (since bound variables are now
+hardcoded to have multiple characters, e.g. v2)
+* eliminate precedence conventions between and/or and if/iff
+* infix grouping with [ ] instead of ( )
+* apostrophe rather than ? indicates type var (e.g., <'at,t> rather than
+<?at,t>)
+
+* treat cat nodes above dummy terms as dummies (fixes bug)
+* reduce terms in all positions of an arglist (fixes bugs)
+* match type vars with functional types to support, e.g.,
+generalized junction (fixes bugs)
+* display previous lambda conversion exercises when focused
+
+
 2013-04-01: Version 2.0.0-beta
 ------------------------------
 
