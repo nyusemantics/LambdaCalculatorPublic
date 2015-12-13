@@ -36,7 +36,7 @@ directions Give the semantic type of the following lambda-expressions.
 c
 P(c)
 Q(x) V ~Q(x)
-Lx[P(x) &amp; Q(x)]
+Lx.P(x) &amp; Q(x)
 
 exercise lambda conversion
 points per exercise 15
@@ -45,10 +45,10 @@ directions After checking that the type of the function and the type of the
 directions argument(s) match, simplify the following expressions performing
 directions one lambda-conversion at a time.
 
-Lx[P(x) &amp; Q(x)] (a)
-LxLy[R(a,y) &amp; Q(x)] (a) (b)
-Lx[a] (b)
-LxLx[P(x) -> R(x,c)] (a) (b)
+[Lx.P(x) &amp; Q(x)] (a)
+[LxLy.R(a,y) &amp; Q(x)] (a) (b)
+[Lx.a] (b)
+[LxLx.P(x) -> R(x,c)] (a) (b)
 </pre>
 
 <h2>File Format Basics</h2>
@@ -111,7 +111,7 @@ exercise tree</pre></dd>
 directions argument(s) match, simplify the following expressions performing
 directions one lambda-conversion at a time.</pre>
 <p>You can include predicate logic expressions inside the directions. By writing the expressions according to the directions below, and surrounding them in curly braces, they will appear to the student rendered nicely with the appropriate symbols for lambdas, etc.</p>
-<pre>directions The expression {Lx.Iy[P(y,x)]} has type &lt;e,e&gt;.</pre>
+<pre>directions The expression {Lx.Iy.P(y,x)} has type &lt;e,e&gt;.</pre>
 <p>Greek letters may be included in two ways. 1) By preceding the name of the letter
 with a backslash, as in LaTeX. For instance, \alpha for lowercase alpha or \Omega for a capital omega. (Not all Greek letters are supported.)
 <!-- note something similar below within expressions and brackted trees -->
@@ -126,25 +126,29 @@ Lx[a] (b)</pre></dd>
 
 <dt><tt>multiple letter identifiers</tt></dt>
 <dt><tt>single letter identifiers</tt></dt>
-<dd><p>After this directive, identifiers can be either be words of more than
-one letter, or may only be single letters. When the <tt>single letter identifiers</tt>
+<dd><p>When the <tt>single letter identifiers</tt>
 directive is set, certain abbreviations are accepted when reading predicate
 logic expressions. For instance, "Pabc" may be used to abbreviate P(a,b,c).
 When <tt>multiple letter identifiers</tt>
 is used, "Pabc" is treated as a single identifier. If neither directive is
-specified, <tt>single letter identifiers</tt> is assumed.</p></dd>
+specified, <tt>multiple letter identifiers</tt> is assumed.</p></dd>
 
 <dt><tt>define ___ : ___</tt></dt>
 <dd><p>Defines lexical entries for use in tree exercises provided to the student. The student will be able to enter other lexical entries as needed. Multiple words can be given the same lexical entry by separating the words with comma. A word may be given multiple lexical entries by repeating the <tt>define</tt> line multiple times. A single lexicon is used for all exercises in the file. Example:</p>
 <pre>define Sue : s
-define introduce, introduces : LxLyLz[introduces(z,x,y)]</pre></dd>
+define introduce, introduces : LxLyLz.introduces(z,x,y)</pre></dd>
 
 <dt><tt>use rule ___</tt></dt>
-<dd><p>Indicates which composition rules are allowed to be used in tree exercises, including function application, non-branching nodes (copying the denotation of the single child node to the parent node), predicate modification, and lambda abstraction, based on the Heim &amp; Kratzer textbook. Example:</p>
+<dd><p>Indicates which composition rules are allowed to be used in tree
+exercises, including function application, intensional function application,
+non-branching nodes (copying the denotation of the single child node to the
+parent node), predicate modification, and lambda abstraction, based on the
+Heim &amp; Kratzer textbook. Example:</p>
 <pre>use rule function application
 use rule non-branching node
 use rule predicate modification
-use rule lambda abstraction</pre></dd>
+use rule lambda abstraction
+use rule intensional function application</pre></dd>
 
 
 </dl>
@@ -157,7 +161,7 @@ use rule lambda abstraction</pre></dd>
 
 <p>For this exercise type, the instructor enters an expression in predicate logic. The student's task is to provide the semantic type of the expression. For example, if the exercise is:</p>
 
-<pre>λx[P(x) ∧ Q(x)]</pre>
+<pre>λx.P(x) ∧ Q(x)</pre>
 
 <p>The student is expected to answer:</p>
 
@@ -167,7 +171,7 @@ use rule lambda abstraction</pre></dd>
 
 <p>Predicate logic expressions can be entered in exercise files without needing to insert special characters like lambdas and wedges. This is described in more detail below. For the example above, the instructor enters into the exercise file:</p>
 
-<pre>Lx[P(x) &amp; Q(x)]</pre>
+<pre>Lx.P(x) &amp; Q(x)</pre>
 
 <p>The correct answer, i.e. the type of this expression, does not need to be entered into the exercise file. The Lambda program will compute the correct answer itself.</p>
 
@@ -175,11 +179,11 @@ use rule lambda abstraction</pre></dd>
 
 <p>For this exercise type, the instructor enters an expression in predicate logic. The student's task is to simplify the expression by performing lambda conversions, one at a time. For example, if the exercise is:</p>
 
-<pre>λx.λy[R(a,y) ∧ Q(x)] (a) (b)</pre>
+<pre>[λx.λy.R(a,y) ∧ Q(x)] (a) (b)</pre>
 
 <p>The student is expected first to answer:</p>
 
-<pre>λy[R(a,y) ∧ Q(a)] (b)</pre>
+<pre>[λy.R(a,y) ∧ Q(a)] (b)</pre>
 
 <p>The Lambda program will check this intermediate answer and then allow the student to proceed to the next step:</p>
 
@@ -188,8 +192,8 @@ use rule lambda abstraction</pre></dd>
 <p>It is possible to lambda-convert over higher types. This proceeds as follows:</p>
 
 <pre>
-λX[X(b)] (λx. R(a,x)) 
-(λx[R(a,x)]) (b) 
+[λX.X(b)] (λx. R(a,x)) 
+[λx.R(a,x)] (b) 
 R(a,b)
 </pre>
 
@@ -198,10 +202,10 @@ R(a,b)
 <p>Sometimes creating an alphabetical variant is needed before proceeding to lambda conversion. In these cases, the Lambda program will realize that an alphabetical variant is necessary, and it will require that the student enters it before preceeding with simplification. An example of this is shown below:</p>
 
 <pre>
-Exercise: λx.∃y[R(y,x)] (y)
+Exercise: [λx.∃y.R(y,x)] (y)
 Student's responses:
-1) λx.∃yʹ[R(yʹ,x)] (y)
-2) ∃yʹ[R(yʹ,y)]
+1) [λx.∃yʹ.R(yʹ,x)] (y)
+2) ∃yʹ.R(yʹ,y)
 </pre>
 
 <p>The correct answers to lambda conversion exercises, i.e. the simplifications of the expressions, do not need to be entered into the exercise file. The Lambda program will compute the correct answer (including the steps needed to reach it) itself.</p>
@@ -211,9 +215,14 @@ Student's responses:
 <p>The Lambda program will read predicate logic expressions from exercise files. Predicate logic expressions may include:</p>
 
 <ul>
-<li>Constants and variables. Constants and variables must be single letters only, unless the <tt>multiple letter identifiers</tt> directive is used. Primes can be entered with the apostrophe. Some capital letters (A, E, I, and L) are treated specially by the Lambda program; see the note below on using these letters within constants and variables.</li>
+  <li>Constants and variables. If the <tt>single letter identifiers</tt>
+  directive is used, constants and variables must be single letters only.
+  Otherwise they may contain multiple characters, including primes (entered
+  with the apostrophe) and asterisks. Some capital letters (A, E, I, and L)
+  are treated specially by the Lambda program; see the note below on using
+  these letters within constants and variables.</li>
 <li>Constants and variable with explicit types using an underscore to separate the name and the type, such as: x_e, X_&lt;e,t&gt;, etc. Composite types such as &lt;e,t&gt; must be written with brackets and cannot be abbreviated as "et". Explicit types are unnecessary when the typing conventions specified in the exercise file already provide a type for the identifier.</li>
-<li>Predicates, entered as P(a) or P(a,b,c) (or if the <tt>multiple letter identifiers</tt> has not been specified, in abbreviated form such as Pabc).</li>
+<li>Predicates, entered as P(a) or P(a,b,c) (or if the <tt>single letter identifiers</tt> has been specified, in abbreviated form such as Pabc).</li>
 <li>The logical connectives, which can be entered according to the table below:
   <table>
   <tr><th>Connective</th> <th>You Type</th></tr>
@@ -224,8 +233,9 @@ Student's responses:
   <tr><td style="text-align: center">∨</td><td style="text-align: center">V</td></tr>
   <tr><td style="text-align: center">→</td><td style="text-align: center">-&gt;</td></tr>
   <tr><td style="text-align: center">↔</td><td style="text-align: center">&lt;-&gt;</td></tr>
+  <tr><td style="text-align: center">⊕</td><td style="text-align: center">+</td></tr>
+  <tr><td style="text-align: center">⊑</td><td style="text-align: center">&lt;:</td></tr>
   </table>
-  Operator precedence is as given in the table, except that the pairs →/↔, ∧/∨, and =/≠ represent operators at the same operator precedence, so expressions like (a = b ≠ c) is not well formed.</li>
 <li>Parenthesized expressions, using parens (...) or brackets [...].</li>
 <li>Quantifiers and binders, which can be entered using capital Roman letters according to the table below:
   <table>
@@ -235,13 +245,24 @@ Student's responses:
   <tr><td style="text-align: center">λ</td><td style="text-align: center">L</td></tr>
   <tr><td style="text-align: center">ι</td><td style="text-align: center">I</td></tr>
   </table>
-For example, Ax[P(x)], AxEy[P(x) &amp; Q(y)], Lx[P(x)], LxLy.P(x,y) &amp; Q(y), Iz[king(z)]. Periods may separate multiple consecutive quantifiers/binders. After quantifiers and binders, a bracketed expression should follow to avoid scope ambiguity.</li>
+For example, Ax.P(x), AxEy.P(x) &amp; Q(y), Lx.P(x), LxLy.P(x,y) &amp; Q(y), Iz.king(z). Periods may separate multiple consecutive quantifiers/binders. After quantifiers and binders, a bracketed expression should follow to avoid scope ambiguity.</li>
 <li>To use capital E, A, L, I, and V as those letters in a constant or variable, precede the letter with a backslash (\) to indicate to the program to treat the letter following like normal, e.g. H\APPY, \L\ITT\L\E.</li>
-<li>Function application, which is an expression followed by another expression (usually in parenthesis and separated by a space), such as Lx[P(x)] (b).</li>
+<li>Function application, which is an expression followed by another expression (usually in parenthesis and separated by a space), such as [Lx.P(x)] (b).</li>
 <li>Single Greek letters may be used as constants or variables by preceding the name of the letter
 with a backslash, as in LaTeX. For instance, \alpha for lowercase alpha or \Omega for a capital omega. (Not all Greek letters are supported.)
 <!-- note use of Greek letters in directions and in bracketed trees --></li>
 </ul>
+
+<p>
+Operator precedence: The binding domain of binders like ∃, ∀, λ, and ι extends
+as far to the right as possible within their nesting groups. So [∀x.P(x) &amp;
+Q(x)] gives the quantifier scope over the conjunction. Among the propositional
+connectives, negation has higher precedence than anything else, and everything
+else is of equal precedence. So p &amp; q → r is not well-formed and must be
+disambiguated as either (p &amp; q) → r or p &amp; (q → r).
+
+the right as possible within its nesting group.
+</p>
 
 <h3>Tree Exercises</h3>
 
