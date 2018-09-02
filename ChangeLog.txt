@@ -1,3 +1,14 @@
+2018-08-23: Version 2.1.1
+-------------------------
+
+fix loading of student exercises saved with traces
+add support applying functions with product types
+add support for nested product types
+open window goes to Downloads directory at beginning of session
+open window goes to previous open directory otherwise
+updated about window in Mac
+
+
 2015-12-07: Version 2.1.0
 -------------------------
 
