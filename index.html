@@ -409,7 +409,7 @@
       <div class="entry-content clearfix" style="padding-top:1px;">
         <h3 id="download" class="anchor">Downloading and Installing</h3>
         <p>
-          You can download the current student version 2.2.0 for Mac/Linux (September 2, 2018; <a href="ChangeLog.txt">Change Log</a>), and 2.1.0 for Windows by clicking the icon
+          You can download the current student version 2.3.0 for Mac/Linux/Window (August 26, 2019; <a href="ChangeLog.txt">Change Log</a>) by clicking the icon
           for your operating system below.
         </p>
 
@@ -418,15 +418,15 @@
         <div class="top-level dialog wide download">
           <div class="text-center">
             <a class="button"
-              href="https://github.com/nyusemantics/LambdaCalculator/releases/download/2.2.0/LambdaCalculatorSE-2.2.0.dmg">
+              href="https://github.com/nyusemantics/LambdaCalculator/releases/download/2.3.0/Lambda.Calculator.SE-2.3.0.dmg">
               <i class="fa fa-apple fa fa-3x"></i>Mac OSX
             </a>
             <a class="button"
-              href="https://github.com/nyusemantics/LambdaCalculator/releases/download/v2.1.0/LambdaCalculatorSE-2.1.0.exe">
+              href="https://github.com/nyusemantics/LambdaCalculator/releases/download/2.3.0/LambdaCalculatorSE-2.3.0-windows.zip">
               <i class="fa fa-windows fa fa-3x"></i>Windows
             </a>
             <a class="button"
-              href="https://github.com/nyusemantics/LambdaCalculator/releases/download/2.2.0/LambdaCalculator-2.2.0.jar">
+              href="https://github.com/nyusemantics/LambdaCalculator/releases/download/2.3.0/LambdaCalculatorSE-2.3.0.jar">
               <i class="fa fa-linux fa fa-3x"></i>Linux
             </a>
           </div>
@@ -434,13 +434,13 @@
         <!-- end download buttons -->
 
         <div style="font-size:125%">Download older version for
-          <a href="https://github.com/nyusemantics/LambdaCalculator/releases/download/v2.1.0/LambdaCalculatorSE-2.1.0.dmg">
+          <a href="https://github.com/nyusemantics/LambdaCalculator/releases/download/2.2.0/LambdaCalculatorSE-2.2.0.dmg">
             Mac
           </a> ,
           <a href="https://github.com/nyusemantics/LambdaCalculator/releases/download/v2.1.0/LambdaCalculatorSE-2.1.0.exe">
             Windows
           </a> , and
-          <a href="https://github.com/nyusemantics/LambdaCalculator/releases/download/v2.1.0/LambdaCalculatorSE-2.1.0.jar">
+          <a href="https://github.com/nyusemantics/LambdaCalculator/releases/download/2.2.0/LambdaCalculator-2.2.0.jar">
             Linux
           </a>
         </div>
@@ -449,7 +449,7 @@
         <br>
 
         <p>
-          For Mac and Windows: just download and double-click to start. If
+          For Mac: just download and double-click to start. If
           are running OS X 10.7.5 (Mountain Lion) or later, you may need to
           temporarily relax your security settings to open the application,
           since it is not from the Mac App Store. In System Preferences >
@@ -459,8 +459,9 @@
           (Sierra) or later, you may be able to circumvent the security
           restrictions by navigating to the Lambda Calculator in Finder,
           Control-clicking the app icon, and choosing Open from shortcut menu.
-          Note: the Windows download is version 2.1.0. Windows users wishing to
-          use version 2.2.0 can follow instructions for Linux.
+          For Windows: download the file and unzip. Enter the resulting folder and 
+          double-click on the exe file inside to start. Do not move the exe file 
+          out of the unzipped folder.
           For Linux: start with <code>java
           -jar LambdaCalculator.jar</code>, but make sure you run it with
           Sun's Java, not GNU libgcj. You can check which version you have with
@@ -469,11 +470,12 @@
 
         <h5 id="java">Installing Java</h5>
         <p>
-          Windows and Linux users will need to make sure they have the <a
+          Linux users will need to make sure they have the <a
             href="http://www.java.com/getjava">Java JRE</a> 1.8 or newer
-          installed. The Windows version of the calculator will check on
-          startup if Java is installed, and if necessary, will take the user
-          to a website where Java can be downloaded.
+          installed. The Windows download contains a folder called jre180,
+          which contains the Java Runtime Environment 1.8. As long as the 
+          exe file and jre180 are kept in the same folder, the application 
+          will run out of the box with no need to install Java separately. 
         </p>
 
         <h5>Teacher Edition</h5>
