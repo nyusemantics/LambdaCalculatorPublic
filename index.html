@@ -449,36 +449,30 @@
         <br>
 
         <p>
-          For Mac: just download and double-click to start. If
-          are running OS X 10.7.5 (Mountain Lion) or later, you may need to
-          temporarily relax your security settings to open the application,
-          since it is not from the Mac App Store. In System Preferences >
-          Security &amp; Privacy > General, set "Allow applications downloaded
-          from:" to "Anywhere". After opening and quitting the app once, you
-          may adjust the setting as you like. If you are running OS X 10.12
-          (Sierra) or later, you may be able to circumvent the security
-          restrictions by navigating to the Lambda Calculator in Finder,
-          Control-clicking the app icon, and choosing Open from shortcut menu.
-          
-          For Windows: download the file and unzip. Enter the resulting folder and 
-          double-click on the exe file inside to start. Do not move the exe file 
-          out of the unzipped folder.
-          
-          For Linux: start with <code>java
-          -jar LambdaCalculator.jar</code>, but make sure you run it with
-          Sun's Java, not GNU libgcj. You can check which version you have with
-          <code>java -version</code>.
+          For Mac: download the .dmg file, double-click to open, and drag the application
+          to the "Applications" folder or wherever else you like. 
+          The first time you launch the application, right-click or Ctrl-click on it 
+          and select "Open" from the shortcut menu.  
+          After opening and quitting it once in this way, you
+          can launch it simply by double-clicking. 
         </p>
-
-        <h5 id="java">Installing Java</h5>
         <p>
-          Linux users will need to make sure they have the <a
-            href="http://www.java.com/getjava">Java JRE</a> 1.8 or newer
-          installed. The Windows download contains a folder called jre180,
-          which contains the Java Runtime Environment 1.8. As long as the 
-          exe file and jre180 are kept in the same folder, the application 
-          will run out of the box with no need to install Java separately. 
+          For Windows: download the file and unzip. Enter the resulting folder called LCSE. It contains
+          an .exe file and a subfolder called jre180 which contains a Java runtime environment. 
+          Double-click on the .exe file to start. As long as the 
+          .exe file and jre180 are kept in the same folder, the application 
+          will run out of the box with no need to install Java separately. Unless you have a separate Java runtime environment 
+          installed on your computer, do not move the exe file out of the LCSE folder, and do not move 
+          or delete the jre180 folder. 
         </p>
+        <p>
+          For Linux: make sure you have either <a href="https://www.java.com/en/download/">Oracle's java</a> or 
+          <a href="https://openjdk.java.net/install/">openjdk</a> installed, in each case version 1.8 
+          or higher. (Avoid GNU libgcj as this will not work.) You can check which version of java you have with
+          <code>java -version</code>. To launch the application, type <code>java
+          -jar LambdaCalculator-2.3.0.jar</code>.  
+        </p>
+       
 
         <h5>Teacher Edition</h5>
         <p>
