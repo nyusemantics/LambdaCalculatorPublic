@@ -18,6 +18,6 @@ This project is distributable under the terms of the GNU GPL
 ## Installation
 
 You can download editions of the tool for Windows, OS X, and linux from [the
-releases](https://github.com/dylnb/LambdaCalculator/releases) tab of this
+releases](https://github.com/nyusemantics/LambdaCalculatorPublic/releases) tab of this
 repository. Further information and instructions about installation and usage
 are available at [the wiki](https://github.com/nyusemantics/LambdaCalculatorPublic/wiki).
