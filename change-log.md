@@ -38,6 +38,6 @@
 * Exercise files may contain special symbols; documented in Exercise File Format page 
 
 ## Previous updates
-gh-pages branch: https://github.com/nyusemantics/LambdaCalculator/releases
+gh-pages branch: https://github.com/nyusemantics/LambdaCalculatorPublic/releases
 
 Change log: https://github.com/nyusemantics/LambdaCalculatorPublic/blob/gh-pages/ChangeLog.txt
