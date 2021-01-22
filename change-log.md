@@ -147,7 +147,5 @@ quantifiers.
 * Corrected a problem saving exercise files with identifier conventions without explicit description text.
 * Fix typo-type mistakes in example2.txt
 
-## Previous updates
+## Previous releases
 gh-pages branch: https://github.com/nyusemantics/LambdaCalculatorPublic/releases
-
-Change log: https://github.com/nyusemantics/LambdaCalculatorPublic/blob/gh-pages/ChangeLog.txt
