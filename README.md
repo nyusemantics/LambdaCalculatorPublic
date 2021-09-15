@@ -10,10 +10,6 @@ of meaning according to Heim & Kratzer (1998)-style semantics.
 Up-to-date information about this project is on [the project
 website](http://lambdacalculator.com).
 
-## Copying
-
-This project is distributable under the terms of the GNU GPL
-(the latest version).
 
 ## Installation
 
