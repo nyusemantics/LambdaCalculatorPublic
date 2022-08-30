@@ -1,5 +1,21 @@
 # Lambda Calculator Change Log
 
+## 2/2021 - 7/2022 (update to version 2.6.0)
+### Authors: Raef Khan, Kaustubh Ghoshal, Pinhan Zhao
+
+1. Implemented Commutativity and Associativity
+* Made the following operations commutative and associative: And, Or, Iff, Equality, Fusion, Multiplication, Set Union, Set Intersection.
+
+2. Added Bracket Highlighting
+* When brackets match, they are highlighted in green. If there are not enough brackets, the mismatched ones will highlight red. 
+
+3. Other bug fixes and features
+* Fixed bugs #25 and #28
+* Added input symbol for Set Union
+* Parser now throws an error when a word is defined multiple times.
+* Added brackets around product types to make them more explicit. Product types always bind more tightly than implicit comma. 
+* Fixed spacing issue with comma seperator when a composite type has a product type as one of the subtypes.
+
 ## 9/2020 - 1/2021 (update to version 2.5.0)
 ### Authors: Anna Alsop, Raef Khan and Nigel Flower
 
